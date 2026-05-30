@@ -1,0 +1,28 @@
+# .NET build output
+bin/
+obj/
+*.pdb
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# C++ build artifacts
+*.exe
+*.res.o
+
+# Claude Code internals
+.claude/
+
+# Runtime / logs
+whisper_process.log
+*.log
+
+# Obsolete files superseded by whispercli.*
+whispercpp.cpp
+whispercpp.exe
+whispercpp.bat
+whispercpp.ps1
+whisper.cpp.gui.png
+batch.py

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>WhisperGUI.ico</ApplicationIcon>
+    <AssemblyName>WhisperLauncher</AssemblyName>
+    <RootNamespace>WhisperLauncher</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Logos and icon embedded into the exe (item 8) -->
+    <EmbeddedResource Include="ffmpeg_logo.png" />
+    <EmbeddedResource Include="whisper_logo.png" />
+    <EmbeddedResource Include="gglm_logo.png" />
+    <!-- WhisperGUI.ico is already embedded via ApplicationIcon above -->
+
+    <!-- config.ini ships next to the exe; created at runtime if absent -->
+    <Content Include="config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
